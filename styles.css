@@ -1,158 +1,230 @@
-body {
-  font-family: 'EB Garamond', serif;
-  font-size: 20px;
-  line-height: 1.6;
-  color: #333;
+:root {
+  --primary-blue: #4444ff;
+  --text-color: #1a1a1a;
+  --bg-color: #ffffff;
+  --gray-bg: #f5f5f5;
+}
+
+* {
   margin: 0;
   padding: 0;
-  background-color: #fff;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'EB Garamond', serif;
+  color: var(--text-color);
+  background: var(--bg-color);
+  line-height: 1.5;
 }
 
 .container {
-  max-width: 700px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
-}
-
-h1 {
-  font-size: 48px;
-  font-weight: normal;
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.grid {
-  display: grid;
-  gap: 20px;
-}
-
-.card {
-  text-decoration: none;
-  color: inherit;
-}
-
-.card-content {
-  background-color: #f9f9f9;
-  padding: 20px;
-}
-
-.card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
-}
-
-h2 {
-  font-size: 24px;
-  font-weight: normal;
-  margin: 0;
-}
-
-.arrow {
-  color: #666;
-}
-
-p {
-  margin-top: 10px;
-  margin-bottom: 0;
-  color: #666;
+  padding: 40px 20px;
 }
 
 .site-header {
-  display: flex;
-  align-items: center;
-  padding: 2rem 0;
-  margin-bottom: 2rem;
+  text-align: center;
+  margin-bottom: 60px;
 }
 
-.header-left {
+.logo-container {
   display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
 
-.title-image {
+.spiral-logo {
+  width: 120px;
+  height: 120px;
+  background: url('spiral.svg') no-repeat center;
+  background-size: contain;
+}
+
+.atom-logo {
+  width: 120px;
+  height: 120px;
+  background: url('atom.svg') no-repeat center;
+  background-size: contain;
+}
+
+h1 {
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.principle {
+  position: relative;
+  padding: 30px;
+  background: var(--bg-color);
+  border: 1px solid #eaeaea;
+}
+
+.principle-label {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 16px;
+  padding: 4px 12px;
+  background: var(--gray-bg);
+  display: inline-block;
+  border-radius: 4px;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 400;
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+p {
+  font-size: 18px;
+  color: #444;
+}
+
+.sparkle {
+  position: absolute;
   width: 100px;
-  height: auto;
-  margin-right: 2rem;
+  height: 100px;
+  background: url('sparkle.svg') no-repeat center;
+  background-size: contain;
+}
+
+.sparkle-1 {
+  bottom: -50px;
+  right: -50px;
+}
+
+.sparkle-2 {
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.principles-summary {
+  grid-column: 1 / -1;
+  padding: 40px;
+  background: var(--gray-bg);
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.summary-item {
+  font-size: 18px;
+  color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+  .principles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  .logo-container {
+    flex-direction: column;
+  }
+
+  .spiral-logo,
+  .atom-logo {
+    width: 80px;
+    height: 80px;
+  }
 }
 
 .header-nav {
+  margin-top: 30px;
   display: flex;
-  gap: 2rem;
+  gap: 40px;
+  justify-content: center;
 }
 
 .header-nav a {
+  color: var(--text-color);
   text-decoration: none;
-  color: #333;
-  font-size: 1.2rem;
-  font-weight: 500;
-  transition: color 0.2s ease;
+  font-size: 20px;
+  transition: color 0.2s;
 }
 
 .header-nav a:hover {
+  color: var(--primary-blue);
+}
+
+.learn-more {
+  display: inline-block;
+  margin-top: 20px;
+  color: var(--primary-blue);
+  text-decoration: none;
+  font-size: 18px;
+  transition: opacity 0.2s;
+}
+
+.learn-more:hover {
+  opacity: 0.8;
+}
+
+.contact-info {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #eaeaea;
+}
+
+.contact-info a {
+  color: var(--primary-blue);
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .header-nav {
+    gap: 20px;
+  }
+  
+  .header-nav a {
+    font-size: 18px;
+  }
+}
+
+.support-section {
+  grid-column: 1 / -1;
+  margin-top: 40px;
+  padding: 40px 0;
+  border-top: 1px solid #eaeaea;
+}
+
+.support-section h2 {
+  margin-top: 16px;
+  font-size: 48px;
+}
+
+.support-section p {
+  max-width: 800px;
+  margin-top: 24px;
+  font-size: 20px;
+}
+
+.support-section em {
+  display: block;
+  margin-top: 24px;
+  font-style: italic;
   color: #666;
-}
-
-section {
-    margin: 3em 0;
-}
-
-section h2 {
-    font-size: 1.5em;
-    margin-bottom: 0.5em;
-    color: #333;
-}
-
-section ul {
-    list-style: none;
-    padding: 0;
-}
-
-section ul li {
-    margin: 0.8em 0;
-}
-
-section ul li a {
-    color: #0066cc;
-    text-decoration: none;
-    font-size: 0.9em;
-}
-
-section ul li a:hover {
-    text-decoration: underline;
-}
-
-.topic-description {
-    display: none;
-}
-
-/* Update existing link styles and add global link styles */
-a {
-    color: #0066cc;
-    text-decoration: none;
-}
-
-a:visited {
-    color: #0066cc; /* Keep the same color even after visiting */
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Update header nav links to override the global style */
-.header-nav a {
-    color: #333;
-    font-size: 1.2rem;
-    font-weight: 500;
-    transition: color 0.2s ease;
-}
-
-.header-nav a:hover {
-    color: #666;
-    text-decoration: none;
-}
-
-.header-nav a:visited {
-    color: #333;
+  font-size: 18px;
 }
