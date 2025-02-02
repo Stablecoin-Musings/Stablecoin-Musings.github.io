@@ -21,104 +21,132 @@
   <meta name="twitter:title" content="Stablecoin Musings">
   <meta name="twitter:description" content="Stablecoin Musings is a technical exploration of stablecoin protocols and mechanism design">
   <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/193769278?s=200&v=4">
-
+  
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: ui-monospace, "Cascadia Mono", "Segoe UI Mono", "Liberation Mono", Menlo, Monaco, Consolas, monospace;
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
       line-height: 1.5;
-      max-width: 600px;
-      margin: 40px auto;
-      padding: 0 20px;
-      color: #000;
+      color: #333;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 20px;
     }
 
-    .header {
-      margin-bottom: 30px;
-    }
-
-    .nav {
+    nav {
+      display: flex;
+      justify-content: space-between;
       margin-bottom: 40px;
+      font-size: 14px;
     }
 
-    .nav a {
-      color: #0000EE;
+    nav a {
+      color: #333;
       text-decoration: none;
     }
 
-    .nav span {
-      margin: 0 8px;
-      color: #000;
+    .store {
+      text-align: center;
+      font-style: italic;
     }
 
-    p {
-      margin: 20px 0;
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-top: 40px;
+      /* Added margin since image was removed */
     }
 
-    .link {
-      color: #0000EE;
-      text-decoration: none;
-    }
-
-    .footer {
-      margin-top: 60px;
+    .section-title {
       color: #666;
+      margin-bottom: 20px;
+      font-size: 14px;
     }
 
-    .footer-section {
-      margin: 10px 0;
+    .exhibitions-list {
+      list-style: none;
     }
 
-    .footer a {
-      color: #666;
-      text-decoration: none;
-      border-bottom: 1px solid #666;
+    .exhibitions-list li {
+      margin-bottom: 10px;
+      font-size: 14px;
     }
 
-    .footer-separator {
-      margin: 0 5px;
+    .studio-text {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .awards-list {
+      list-style: none;
+      font-size: 14px;
+    }
+
+    .awards-list li {
+      margin-bottom: 10px;
+    }
+
+    .footer-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin-top: 40px;
     }
   </style>
 </head>
 
 <body>
-  <div class="header">
-    <a href="https://stablecoinmusings.xyz/"><img src="pfp.png" alt="Logo" style="width: 20%;"></a>
-  </div>
-
-  <div class="nav">
-    About <span>|</span> <a href="https://stablecoinmusings.substack.com/" target="_blank">Newsletter</a> <span>|</span> <a href="/topics">Topics</a> <span>
-  </div>
-
-  <p>
-    Stablecoin Musings is a technical exploration of stablecoin protocols and mechanism design. We turn complex stablecoin concepts into clear,
-    accessible knowledge. This has been our mission since day 1.
-  </p>
-
-  <p>
-   What do we believe in? Crypto solves the issue of trust. Crypto's biggest utility is payments. Stablecoins are becoming an essential bridge between TradFi and crypto because they solve the critical problem of price
-  volatility while enabling programmable money. It’s not going anywhere, anytime, anyhow.
-  </p>
-
   
-  <p>
-    <b>Supporters</b>  
-    <br> 
-    If you're a fan of our work, please support our mission to put out the best content possible on all things stables!
-  
-  </p>
-  <p><i>~ upcoming</i></p>
+  <img src="sm.png" class="header-image" style="width: 10%; height: auto; border-radius: 20px;">
 
-  <div class="footer">
-    <div class="footer-section">
-      Follow us on x/twitter <a href="https://twitter.com/stablesmusings" target="_blank">@StablesMusings</a>
+  <div class="content-grid">
+    <div>
+      <div class="section-title">[about]</div>
+      <p class="studio-text">
+        Stablecoin Musings is a technical exploration of stablecoins, focusing on mechanism and market design, and everything in between. We want to figure out how things work and turn complex stablecoin
+        concepts into clear, accessible knowledge. This has been our mission since day 1.
+        <br>
+        <br>
+        → Follow us @ <a href="https://x.com/stablesmusings" style="text-decoration: none; font-weight: normal;">StablesMusings</a>
+        <br>
+        → Subscribe to <a href="https://stablecoinmusings.substack.com/" style="text-decoration: none; font-weight: normal;">newsletter</a>
+      </p>
+      
+      <div class="section-title" style="margin-top: 40px">[supporters]</div>
+      <p class="studio-text">
+        If you're a fan of our work, please support our mission to put out the best content possible on all things stables by being a sponsor!
+        <br>
+        <br>
+        Reach out on <a href="https://t.me/bithiahk" target="_blank" style="color: grey;">telegram</a> or fill out this <a href="https://tally.so/r/wA4Wde" style="color: grey;">form</a>.
+      </p>
+      <br>
+      <ul class="awards-list">
+        <li>~ upcoming</li>
+
+      </ul>
     </div>
-    <div class="footer-section">
-      For inquiries, DM Bithiah on <a href="https://twitter.com/bithiahkoshy" target="_blank">x/twitter</a> or <a href="https://t.me/bithiahk" target="_blank">telegram</a>
-    </div>
-    <div class="footer-section">
-      Made with ❤️ from 🇦🇺
+    
+    
+
+    <div>
+      <div class="section-title">[writing]</div>
+      <ul class="exhibitions-list">
+        <li>2025 - <a href="https://stablecoinmusings.substack.com/p/brief-on-delta-neutral-stablecoins" style="color: black;">Brief on Delta-Neutral Stablecoins (with focus on Resolv)</a></li>
+        <li>2025 - <a href="https://stablecoinmusings.substack.com/p/brief-on-rwa-backed-yield-bearing" style="color: black;">Brief on RWA-Backed Yield-Bearing Stables (with focus on DAI)</a></li>
+        <li>2024 - <a href="https://stablecoinmusings.substack.com/p/the-price-of-stability-how-stablecoins" style="color: black;">The Price Of Stability: How Stablecoins Maintain Their Pegs</a></li>
+        <li>2024 - <a href="https://stablecoinmusings.substack.com/p/borrowing-and-minting-understanding" style="color: black;">Borrowing and Minting: Understanding the two paths to stablecoin issuance</a></li>
+        <li>2024 - <a href="https://stablecoinmusings.substack.com/p/stablecoins-20-when-your-dollar-makes" style="color: black;">Stablecoins 2.0: When Your Dollar Makes Dollars</a></li>
+        <li>2024 - <a href="https://stablecoinmusings.substack.com/p/a-brief-on-fractional-algorithmic" style="color: black;">A Brief on Fractional-Algorithmic Designs (with focus on Frax)</a></li>
+      </ul>
     </div>
   </div>
+  
 </body>
 
 </html>
