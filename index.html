@@ -30,375 +30,446 @@
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       line-height: 1.6;
-      color: #333;
-      background: #fafafa;
+      color: #1a1a1a;
+      background: #f5f3f0;
     }
 
-    .container {
-      max-width: 1200px;
+    /* Navigation */
+    .nav-wrapper {
+      background: #f5f3f0;
+      border-bottom: 1px solid #e0e0e0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      max-width: 1400px;
       margin: 0 auto;
-      padding: 20px;
+      padding: 0 40px;
     }
 
-    /* Header */
-    .header {
-      text-align: center;
-      padding: 60px 20px 40px;
-      background: white;
-      margin-bottom: 40px;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    .main-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
     }
 
-    .header img {
-      width: 120px;
-      height: auto;
-      border-radius: 20px;
-      margin-bottom: 20px;
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: #1a1a1a;
     }
 
-    .header h1 {
+    .logo-image {
+      width: 40px;
+      height: 40px;
       font-size: 32px;
-      margin-bottom: 12px;
-      color: #1a1a1a;
+      font-weight: 700;
+      line-height: 40px;
+      text-align: center;
     }
 
-    .header p {
-      font-size: 16px;
-      color: #666;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    /* Section Styles */
-    section {
-      background: white;
-      padding: 50px 40px;
-      margin-bottom: 40px;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-
-    .section-title {
-      font-size: 24px;
+    .logo-text {
+      font-size: 18px;
       font-weight: 600;
+      letter-spacing: -0.5px;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 35px;
+      list-style: none;
+    }
+
+    .nav-menu a {
+      text-decoration: none;
       color: #1a1a1a;
-      margin-bottom: 30px;
-      padding-bottom: 15px;
-      border-bottom: 2px solid #f0f0f0;
-    }
-
-    .section-title::before {
-      content: "→ ";
-      color: #666;
-    }
-
-    /* YouTube Section */
-    .youtube-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      margin-top: 20px;
-    }
-
-    .video-card {
-      background: #fafafa;
-      border-radius: 8px;
-      overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
-    }
-
-    .video-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    .video-thumbnail {
-      width: 100%;
-      aspect-ratio: 16/9;
-      background: #e0e0e0;
-      position: relative;
-    }
-
-    .video-thumbnail iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-
-    .video-info {
-      padding: 15px;
-    }
-
-    .video-title {
-      font-size: 15px;
+      font-size: 13px;
       font-weight: 500;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      transition: opacity 0.2s;
+    }
+
+    .nav-menu a:hover {
+      opacity: 0.6;
+    }
+
+    .secondary-nav {
+      display: flex;
+      justify-content: flex-end;
+      gap: 30px;
+      padding: 12px 0;
+      border-top: 1px solid #e0e0e0;
+    }
+
+    .secondary-nav a {
+      text-decoration: none;
+      color: #666;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .secondary-nav a:hover {
+      color: #1a1a1a;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 60px 40px;
+    }
+
+    /* Featured Grid */
+    .featured-section {
+      margin-bottom: 80px;
+    }
+
+    .featured-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    .featured-card {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .featured-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .featured-image {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      margin-bottom: 20px;
+      background: #e0e0e0;
+    }
+
+    .featured-title {
+      font-size: 16px;
+      line-height: 1.5;
+      font-weight: 400;
       color: #1a1a1a;
       margin-bottom: 8px;
     }
 
-    .video-date {
-      font-size: 13px;
-      color: #888;
+    .featured-subtitle {
+      font-size: 14px;
+      line-height: 1.4;
+      color: #666;
+      font-weight: 300;
     }
 
-    /* Newsletter Section */
-    .newsletter-grid {
+    /* Content Sections */
+    .content-section {
+      margin-bottom: 80px;
+    }
+
+    .section-header {
+      font-size: 28px;
+      font-weight: 300;
+      letter-spacing: -0.5px;
+      margin-bottom: 40px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    /* Newsletter List */
+    .newsletter-list {
       display: grid;
-      gap: 20px;
+      gap: 0;
     }
 
     .newsletter-item {
-      padding: 20px;
-      background: #fafafa;
-      border-radius: 8px;
-      border-left: 3px solid #333;
-      transition: all 0.3s ease;
+      padding: 25px 0;
+      border-bottom: 1px solid #e8e8e8;
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 30px;
+      align-items: start;
+      transition: background 0.2s;
     }
 
     .newsletter-item:hover {
-      background: #f5f5f5;
-      border-left-color: #666;
-      transform: translateX(4px);
+      background: rgba(0,0,0,0.02);
+    }
+
+    .newsletter-date {
+      font-size: 13px;
+      color: #999;
+      font-weight: 400;
+      padding-top: 2px;
     }
 
     .newsletter-item a {
       text-decoration: none;
       color: #1a1a1a;
-      font-size: 15px;
-      font-weight: 500;
-      display: block;
-    }
-
-    .newsletter-date {
-      font-size: 13px;
-      color: #888;
-      margin-right: 12px;
-    }
-
-    /* Telegram Section */
-    .telegram-section {
-      background: linear-gradient(135deg, #0088cc 0%, #0066aa 100%);
-      color: white;
-      text-align: center;
-    }
-
-    .telegram-section .section-title {
-      color: white;
-      border-bottom-color: rgba(255,255,255,0.2);
-    }
-
-    .telegram-section .section-title::before {
-      color: rgba(255,255,255,0.7);
-    }
-
-    .telegram-content {
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .telegram-content p {
       font-size: 16px;
-      margin-bottom: 25px;
-      opacity: 0.95;
+      font-weight: 400;
+      line-height: 1.5;
+      transition: color 0.2s;
     }
 
-    .telegram-button {
-      display: inline-block;
-      padding: 14px 32px;
-      background: white;
-      color: #0088cc;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 16px;
-      transition: all 0.3s ease;
-    }
-
-    .telegram-button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    .newsletter-item a:hover {
+      color: #666;
     }
 
     /* About Section */
     .about-content {
-      font-size: 15px;
+      max-width: 800px;
+      font-size: 16px;
       line-height: 1.8;
       color: #444;
     }
 
+    .about-content p {
+      margin-bottom: 20px;
+    }
+
     .about-content a {
-      color: #0088cc;
-      text-decoration: none;
+      color: #1a1a1a;
+      text-decoration: underline;
       font-weight: 500;
     }
 
     .about-content a:hover {
-      text-decoration: underline;
+      opacity: 0.6;
     }
 
-    /* Supporters Section */
-    .supporters-content {
-      font-size: 15px;
-      line-height: 1.8;
-      color: #444;
+    /* CTA Section */
+    .cta-section {
+      background: #1a1a1a;
+      color: white;
+      padding: 60px;
+      text-align: center;
+      margin-bottom: 80px;
     }
 
-    .supporters-list {
-      list-style: none;
-      margin-top: 20px;
+    .cta-section h2 {
+      font-size: 32px;
+      font-weight: 300;
+      margin-bottom: 20px;
+      letter-spacing: -0.5px;
     }
 
-    .supporters-list li {
-      padding: 12px;
-      background: #fafafa;
-      border-radius: 6px;
-      margin-bottom: 10px;
+    .cta-section p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #ccc;
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 16px 40px;
+      background: white;
+      color: #1a1a1a;
+      text-decoration: none;
       font-size: 14px;
-      color: #666;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      transition: transform 0.2s;
+    }
+
+    .cta-button:hover {
+      transform: scale(1.05);
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 40px 0;
+      color: #999;
+      font-size: 13px;
+      border-top: 1px solid #e0e0e0;
     }
 
     /* Responsive */
+    @media (max-width: 968px) {
+      .featured-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+      }
+
+      .nav-menu {
+        gap: 20px;
+      }
+
+      .container {
+        padding: 40px 30px;
+      }
+    }
+
     @media (max-width: 768px) {
-      .header {
-        padding: 40px 20px 30px;
+      .main-nav {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
       }
 
-      .header h1 {
-        font-size: 24px;
+      .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
       }
 
-      section {
+      .secondary-nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      .featured-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
+
+      .newsletter-item {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .container {
         padding: 30px 20px;
       }
 
-      .section-title {
-        font-size: 20px;
+      .section-header {
+        font-size: 24px;
       }
 
-      .youtube-grid {
-        grid-template-columns: 1fr;
+      .cta-section {
+        padding: 40px 30px;
+      }
+
+      .cta-section h2 {
+        font-size: 26px;
       }
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
-    <!-- Header -->
-    <div class="header">
-      <img src="sm.png" alt="Stablecoin Musings Logo">
-      <h1>Stablecoin Musings</h1>
-      <p>A technical exploration of stablecoin protocols and mechanism design</p>
+  <!-- Navigation -->
+  <nav class="nav-wrapper">
+    <div class="nav-container">
+      <div class="main-nav">
+        <a href="#" class="logo">
+          <div class="logo-image">SM</div>
+          <span class="logo-text">Stablecoin Musings</span>
+        </a>
+        <ul class="nav-menu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#newsletter">Journal</a></li>
+          <li><a href="#community">Community</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="secondary-nav">
+        <a href="https://stablecoinmusings.substack.com/" target="_blank">Newsletter</a>
+        <a href="https://x.com/stablesmusings" target="_blank">Twitter</a>
+        <a href="https://t.me/bithiahk" target="_blank">Telegram</a>
+      </div>
     </div>
+  </nav>
+
+  <!-- Main Container -->
+  <div class="container">
+    <!-- Featured Content Grid -->
+    <section class="featured-section">
+      <div class="featured-grid">
+        <a href="https://stablecoinmusings.substack.com/p/understanding-tokenized-investment" target="_blank" class="featured-card">
+          <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=600&fit=crop" alt="Tokenized Funds" class="featured-image">
+          <div class="featured-title">Understanding tokenized investment funds</div>
+          <div class="featured-subtitle">Exploring Superstate's USTB and USCC Fund mechanisms</div>
+        </a>
+
+        <a href="https://stablecoinmusings.substack.com/p/brief-on-delta-neutral-stablecoins" target="_blank" class="featured-card">
+          <img src="https://images.unsplash.com/photo-1642790106117-e829e14a795f?w=800&h=600&fit=crop" alt="Delta-Neutral" class="featured-image">
+          <div class="featured-title">Delta-neutral stablecoin strategies</div>
+          <div class="featured-subtitle">A deep dive into Resolv and hedging mechanisms</div>
+        </a>
+
+        <a href="https://stablecoinmusings.substack.com/p/brief-on-rwa-backed-yield-bearing" target="_blank" class="featured-card">
+          <img src="https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=800&h=600&fit=crop" alt="RWA Stablecoins" class="featured-image">
+          <div class="featured-title">Real-world asset-backed stables</div>
+          <div class="featured-subtitle">How DAI evolved into an RWA powerhouse</div>
+        </a>
+      </div>
+    </section>
 
     <!-- About Section -->
-    <section>
-      <h2 class="section-title">About</h2>
+    <section class="content-section" id="about">
+      <h2 class="section-header">About</h2>
       <div class="about-content">
         <p>
           Stablecoin Musings is a technical exploration of stablecoins, focusing on mechanism and market design, and everything in between. We want to figure out how things work and turn complex stablecoin concepts into clear, accessible knowledge. This has been our mission since day 1.
         </p>
-        <p style="margin-top: 20px;">
-          Follow us on <a href="https://x.com/stablesmusings" target="_blank">Twitter</a> |
-          Subscribe to our <a href="https://stablecoinmusings.substack.com/" target="_blank">Newsletter</a>
+        <p>
+          Through in-depth research, technical analysis, and clear explanations, we demystify the protocols that power the stablecoin ecosystem. Whether you're a developer, researcher, or enthusiast, our goal is to provide the insights you need to understand this rapidly evolving space.
         </p>
       </div>
     </section>
 
-    <!-- YouTube Section -->
-    <section>
-      <h2 class="section-title">YouTube Videos</h2>
-      <div class="youtube-grid">
-        <!-- Video Card 1 - Add your YouTube video embeds here -->
-        <div class="video-card">
-          <div class="video-thumbnail">
-            <!-- Replace VIDEO_ID_1 with your actual YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/VIDEO_ID_1"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-          </div>
-          <div class="video-info">
-            <div class="video-title">Understanding Stablecoin Mechanisms</div>
-            <div class="video-date">Coming soon</div>
-          </div>
-        </div>
-
-        <!-- Video Card 2 -->
-        <div class="video-card">
-          <div class="video-thumbnail">
-            <!-- Replace VIDEO_ID_2 with your actual YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/VIDEO_ID_2"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-          </div>
-          <div class="video-info">
-            <div class="video-title">Deep Dive: Delta-Neutral Stablecoins</div>
-            <div class="video-date">Coming soon</div>
-          </div>
-        </div>
-
-        <!-- Video Card 3 -->
-        <div class="video-card">
-          <div class="video-thumbnail">
-            <!-- Replace VIDEO_ID_3 with your actual YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/VIDEO_ID_3"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-          </div>
-          <div class="video-info">
-            <div class="video-title">RWA-Backed Stablecoins Explained</div>
-            <div class="video-date">Coming soon</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Newsletter Section -->
-    <section>
-      <h2 class="section-title">Newsletter Posts</h2>
-      <div class="newsletter-grid">
+    <section class="content-section" id="newsletter">
+      <h2 class="section-header">Recent Publications</h2>
+      <div class="newsletter-list">
         <div class="newsletter-item">
-          <span class="newsletter-date">2025</span>
+          <div class="newsletter-date">2025</div>
           <a href="https://stablecoinmusings.substack.com/p/understanding-tokenized-investment" target="_blank">
             Understanding tokenized investment fund with Superstate's USTB and USCC Fund
           </a>
         </div>
         <div class="newsletter-item">
-          <span class="newsletter-date">2025</span>
+          <div class="newsletter-date">2025</div>
           <a href="https://stablecoinmusings.substack.com/p/brief-on-delta-neutral-stablecoins" target="_blank">
             Brief on Delta-Neutral Stablecoins (with focus on Resolv)
           </a>
         </div>
         <div class="newsletter-item">
-          <span class="newsletter-date">2025</span>
+          <div class="newsletter-date">2025</div>
           <a href="https://stablecoinmusings.substack.com/p/brief-on-rwa-backed-yield-bearing" target="_blank">
             Brief on RWA-Backed Yield-Bearing Stables (with focus on DAI)
           </a>
         </div>
         <div class="newsletter-item">
-          <span class="newsletter-date">2024</span>
+          <div class="newsletter-date">2024</div>
           <a href="https://stablecoinmusings.substack.com/p/the-price-of-stability-how-stablecoins" target="_blank">
             The Price Of Stability: How Stablecoins Maintain Their Pegs
           </a>
         </div>
         <div class="newsletter-item">
-          <span class="newsletter-date">2024</span>
+          <div class="newsletter-date">2024</div>
           <a href="https://stablecoinmusings.substack.com/p/borrowing-and-minting-understanding" target="_blank">
             Borrowing and Minting: Understanding the two paths to stablecoin issuance
           </a>
         </div>
         <div class="newsletter-item">
-          <span class="newsletter-date">2024</span>
+          <div class="newsletter-date">2024</div>
           <a href="https://stablecoinmusings.substack.com/p/stablecoins-20-when-your-dollar-makes" target="_blank">
             Stablecoins 2.0: When Your Dollar Makes Dollars
           </a>
         </div>
         <div class="newsletter-item">
-          <span class="newsletter-date">2024</span>
+          <div class="newsletter-date">2024</div>
           <a href="https://stablecoinmusings.substack.com/p/a-brief-on-fractional-algorithmic" target="_blank">
             A Brief on Fractional-Algorithmic Designs (with focus on Frax)
           </a>
@@ -406,34 +477,32 @@
       </div>
     </section>
 
-    <!-- Telegram Section -->
-    <section class="telegram-section">
-      <h2 class="section-title">Join Our Telegram</h2>
-      <div class="telegram-content">
+    <!-- CTA Section -->
+    <section class="cta-section" id="community">
+      <h2>Join the Community</h2>
+      <p>
+        Stay connected with the Stablecoin Musings community. Join our Telegram for real-time discussions, updates, and insights on stablecoin protocols and DeFi innovation.
+      </p>
+      <a href="https://t.me/bithiahk" class="cta-button" target="_blank">Join Telegram</a>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="content-section" id="contact">
+      <h2 class="section-header">Support Our Work</h2>
+      <div class="about-content">
         <p>
-          Stay connected with the Stablecoin Musings community! Join our Telegram channel for real-time discussions, updates, and insights on stablecoin protocols and DeFi innovation.
+          If you're a fan of our work, please support our mission to put out the best content possible on all things stables by becoming a sponsor.
         </p>
-        <a href="https://t.me/YOUR_TELEGRAM_CHANNEL" class="telegram-button" target="_blank">
-          Join Telegram Channel
-        </a>
+        <p>
+          Reach out on <a href="https://t.me/bithiahk" target="_blank">Telegram</a> or fill out this <a href="https://tally.so/r/wA4Wde" target="_blank">sponsorship form</a>.
+        </p>
       </div>
     </section>
 
-    <!-- Supporters Section -->
-    <section>
-      <h2 class="section-title">Supporters</h2>
-      <div class="supporters-content">
-        <p>
-          If you're a fan of our work, please support our mission to put out the best content possible on all things stables by being a sponsor!
-        </p>
-        <p style="margin-top: 15px;">
-          Reach out on <a href="https://t.me/bithiahk" target="_blank">Telegram</a> or fill out this <a href="https://tally.so/r/wA4Wde" target="_blank">form</a>.
-        </p>
-        <ul class="supporters-list">
-          <li>~ Upcoming sponsors will be featured here</li>
-        </ul>
-      </div>
-    </section>
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2025 Stablecoin Musings. All rights reserved.</p>
+    </footer>
   </div>
 </body>
 
