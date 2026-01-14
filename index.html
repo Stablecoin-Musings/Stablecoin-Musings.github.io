@@ -69,10 +69,7 @@
     .logo-image {
       width: 40px;
       height: 40px;
-      font-size: 32px;
-      font-weight: 700;
-      line-height: 40px;
-      text-align: center;
+      object-fit: contain;
     }
 
     .logo-text {
@@ -197,11 +194,11 @@
     }
 
     .newsletter-item {
-      padding: 25px 0;
+      padding: 12px 0;
       border-bottom: 1px solid #e8e8e8;
       display: grid;
-      grid-template-columns: 80px 1fr;
-      gap: 30px;
+      grid-template-columns: 60px 1fr;
+      gap: 15px;
       align-items: start;
       transition: background 0.2s;
     }
@@ -211,7 +208,7 @@
     }
 
     .newsletter-date {
-      font-size: 13px;
+      font-size: 11px;
       color: #999;
       font-weight: 400;
       padding-top: 2px;
@@ -220,9 +217,9 @@
     .newsletter-item a {
       text-decoration: none;
       color: #1a1a1a;
-      font-size: 16px;
+      font-size: 14px;
       font-weight: 400;
-      line-height: 1.5;
+      line-height: 1.4;
       transition: color 0.2s;
     }
 
@@ -372,66 +369,49 @@
     <div class="nav-container">
       <div class="main-nav">
         <a href="#" class="logo">
-          <div class="logo-image">SM</div>
+          <img src="sm-logo.png" alt="Stablecoin Musings Logo" class="logo-image">
           <span class="logo-text">Stablecoin Musings</span>
         </a>
         <ul class="nav-menu">
           <li><a href="#about">About</a></li>
-          <li><a href="#newsletter">Journal</a></li>
           <li><a href="#community">Community</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
       <div class="secondary-nav">
-        <a href="https://stablecoinmusings.substack.com/" target="_blank">Newsletter</a>
+        <a href="https://www.youtube.com/@StablecoinMusings" target="_blank">YouTube</a>
+        <a href="https://stablecoinmusings.substack.com/" target="_blank">Substack</a>
+        <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7411374871663964160" target="_blank">LinkedIn</a>
         <a href="https://x.com/stablesmusings" target="_blank">Twitter</a>
-        <a href="https://t.me/bithiahk" target="_blank">Telegram</a>
+        <a href="https://t.me/stablesmusing" target="_blank">Telegram</a>
       </div>
     </div>
   </nav>
 
   <!-- Main Container -->
   <div class="container">
-    <!-- Featured Content Grid -->
-    <section class="featured-section">
-      <div class="featured-grid">
-        <a href="https://stablecoinmusings.substack.com/p/understanding-tokenized-investment" target="_blank" class="featured-card">
-          <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=600&fit=crop" alt="Tokenized Funds" class="featured-image">
-          <div class="featured-title">Understanding tokenized investment funds</div>
-          <div class="featured-subtitle">Exploring Superstate's USTB and USCC Fund mechanisms</div>
-        </a>
-
-        <a href="https://stablecoinmusings.substack.com/p/brief-on-delta-neutral-stablecoins" target="_blank" class="featured-card">
-          <img src="https://images.unsplash.com/photo-1642790106117-e829e14a795f?w=800&h=600&fit=crop" alt="Delta-Neutral" class="featured-image">
-          <div class="featured-title">Delta-neutral stablecoin strategies</div>
-          <div class="featured-subtitle">A deep dive into Resolv and hedging mechanisms</div>
-        </a>
-
-        <a href="https://stablecoinmusings.substack.com/p/brief-on-rwa-backed-yield-bearing" target="_blank" class="featured-card">
-          <img src="https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=800&h=600&fit=crop" alt="RWA Stablecoins" class="featured-image">
-          <div class="featured-title">Real-world asset-backed stables</div>
-          <div class="featured-subtitle">How DAI evolved into an RWA powerhouse</div>
-        </a>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="content-section" id="about">
-      <h2 class="section-header">About</h2>
-      <div class="about-content">
-        <p>
-          Stablecoin Musings is a technical exploration of stablecoins, focusing on mechanism and market design, and everything in between. We want to figure out how things work and turn complex stablecoin concepts into clear, accessible knowledge. This has been our mission since day 1.
-        </p>
-        <p>
-          Through in-depth research, technical analysis, and clear explanations, we demystify the protocols that power the stablecoin ecosystem. Whether you're a developer, researcher, or enthusiast, our goal is to provide the insights you need to understand this rapidly evolving space.
-        </p>
-      </div>
-    </section>
-
-    <!-- Newsletter Section -->
+    <!-- Publications Section -->
     <section class="content-section" id="newsletter">
-      <h2 class="section-header">Recent Publications</h2>
+      <h2 class="section-header">Publications</h2>
       <div class="newsletter-list">
+        <div class="newsletter-item">
+          <div class="newsletter-date">2026</div>
+          <a href="https://stablecoinmusings.substack.com/p/stablecoin-liberalization-cbdc-acceleration" target="_blank">
+            Stablecoin Liberalization, CBDC Acceleration, and the Bifurcation of Digital Money
+          </a>
+        </div>
+        <div class="newsletter-item">
+          <div class="newsletter-date">2025</div>
+          <a href="https://stablecoinmusings.substack.com/p/the-dynamics-behind-digital-money" target="_blank">
+            The Dynamics Behind Digital Money Policy
+          </a>
+        </div>
+        <div class="newsletter-item">
+          <div class="newsletter-date">2025</div>
+          <a href="https://stablecoinmusings.substack.com/p/dollarization-20-effects-on-private" target="_blank">
+            Dollarization 2.0, effects on private banking, monetary sovereignty
+          </a>
+        </div>
         <div class="newsletter-item">
           <div class="newsletter-date">2025</div>
           <a href="https://stablecoinmusings.substack.com/p/understanding-tokenized-investment" target="_blank">
@@ -477,13 +457,29 @@
       </div>
     </section>
 
+    <!-- About Section -->
+    <section class="content-section" id="about">
+      <h2 class="section-header">About</h2>
+      <div class="about-content">
+        <p>
+          Crypto rails are maturing at a rapid pace. But demystifying the regulatory and policy landscape surrounding stablecoins and CBDCs is a challenge.</p>
+          <p>Stablecoin Musings is a newsletter that aims to provide a clear and accessible overview of the latest regulatory and policy developments in the stablecoin and CBDC space.
+        <p>
+         </p>
+      </div>
+    </section>
+
     <!-- CTA Section -->
-    <section class="cta-section" id="community">
-      <h2>Join the Community</h2>
-      <p>
-        Stay connected with the Stablecoin Musings community. Join our Telegram for real-time discussions, updates, and insights on stablecoin protocols and DeFi innovation.
-      </p>
-      <a href="https://t.me/bithiahk" class="cta-button" target="_blank">Join Telegram</a>
+    <section class="content-section" id="community">
+      <h2 class="section-header">Community</h2>
+      <div class="about-content">
+        <p>
+          Stay connected with the Stablecoin Musings community. Join our Telegram channel to stay updated on the latest related news and updates.
+        </p>
+        <p>
+          <a href="https://t.me/stablesmusing" target="_blank">Join Telegram</a>
+        </p>
+      </div>
     </section>
 
     <!-- Contact Section -->
@@ -494,14 +490,14 @@
           If you're a fan of our work, please support our mission to put out the best content possible on all things stables by becoming a sponsor.
         </p>
         <p>
-          Reach out on <a href="https://t.me/bithiahk" target="_blank">Telegram</a> or fill out this <a href="https://tally.so/r/wA4Wde" target="_blank">sponsorship form</a>.
+          Reach out to Bithiah, the creator of Stablecoin Musings, on <a href="https://x.com/bithiahkoshy">X (twitter)</a> or <a href="https://t.me/bithiahk" target="_blank">Telegram</a>.
         </p>
       </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-      <p>&copy; 2025 Stablecoin Musings. All rights reserved.</p>
+      <p>&copy; 2024 - 2026 Stablecoin Musings. All rights reserved.</p>
     </footer>
   </div>
 </body>
