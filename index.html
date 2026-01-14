@@ -249,6 +249,28 @@
       opacity: 0.6;
     }
 
+    /* Videos Section */
+    .videos-container {
+      max-width: 800px;
+    }
+
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      height: 0;
+      overflow: hidden;
+      margin-top: 20px;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
     /* CTA Section */
     .cta-section {
       background: #1a1a1a;
@@ -379,8 +401,9 @@
         </ul>
       </div>
       <div class="secondary-nav">
-        <a href="https://www.youtube.com/@StablecoinMusings" target="_blank">YouTube</a>
+
         <a href="https://stablecoinmusings.substack.com/" target="_blank">Substack</a>
+        <a href="https://www.youtube.com/@StablecoinMusings" target="_blank">YouTube</a>
         <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7411374871663964160" target="_blank">LinkedIn</a>
         <a href="https://x.com/stablesmusings" target="_blank">Twitter</a>
         <a href="https://t.me/stablesmusing" target="_blank">Telegram</a>
@@ -453,6 +476,16 @@
           <a href="https://stablecoinmusings.substack.com/p/a-brief-on-fractional-algorithmic" target="_blank">
             A Brief on Fractional-Algorithmic Designs (with focus on Frax)
           </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Videos Section -->
+    <section class="content-section" id="videos">
+      <h2 class="section-header">Videos</h2>
+      <div class="videos-container">
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/Bko6C444jYk?rel=0&modestbranding=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
       </div>
     </section>
